@@ -2,27 +2,19 @@
 
 A meal logger app.
 Core features:
-- [ ] Log in with Auth provider
+- [x] Log in with Auth provider
 - [ ] Log meals
   - [ ] Logging meal creates or updates a dish
-- [ ] View meals
+- [x] View meals
 - [ ] View dishes
   - [ ] Suggestions for dishes
 
 # How
 
-- [ ] Auth with Next-auth
-  - [ ] Auth with Google
-  - [ ] Auth with Github
-- [ ] API routes
-  - [ ] GET `/api/`
-  - [ ] GET `/api/meal`
-  - [ ] GET `/api/meal/:id`
-  - [ ] POST `/api/meal`
-  - [ ] PUT `/api/meal/:id`
-  - [ ] DELETE `/api/meal/:id`
+- [x] Auth with authjs
+- [x] meals / dish get data from prisma
 - [ ] Meal list
-  - [ ] Meal list page
+  - [x] Meal list page
   - [ ] Meal list item
   - [ ] Meal list item edit
   - [ ] Meal list item delete
