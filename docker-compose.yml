@@ -1,0 +1,34 @@
+# version: "3"
+
+# volumes:
+#   database:
+#     driver: local
+
+# services:
+#   mysql:
+#     platform: linux/amd64
+#     image: mysql:8.0.32
+#     container_name: borg_mysql
+#     restart: always
+#     ports:
+#       - 3306:3306
+#     environment:
+#       MYSQL_DATABASE: borg
+#       MYSQL_ALLOW_EMPTY_PASSWORD: 1
+#     volumes:
+#       - database:/var/lib/mysql
+
+# Use postgres/example user/password credentials
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=Secret123
+      - POSTGRES_USER=jens
+      - POSTGRES_DB=mat
