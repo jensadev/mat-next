@@ -22,7 +22,7 @@ export default async function Home() {
   }
 
   return (
-    <main className={styles.main}>
+    <main>
       <h1>Welcome {session?.user?.name}</h1>
     </main>
   )

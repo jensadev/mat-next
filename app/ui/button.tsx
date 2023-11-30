@@ -1,14 +1,14 @@
 import clsx from 'clsx';
 import './button.css';
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
+  children: React.ReactNode;
   className?: string;
   size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
 }
 
 export function Button(
-  { label, className, size = "medium", ...props }
+  { children, className, size = "medium", ...props }
     : ButtonProps
 ) {
   return (
@@ -20,7 +20,7 @@ export function Button(
       ) + ` button button--${size}`}
       {...props}
     >
-      {label}
+      {children}
     </button>
   );
 }

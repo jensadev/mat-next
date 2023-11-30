@@ -1,5 +1,5 @@
 import { signIn, signOut } from "@/app/lib/auth"
-// import { Button } from "../ui/button"
+import { Button } from "../ui/button"
 
 // }: { provider?: string } & React.ComponentPropsWithRef<typeof Button>) {
 export function SignIn({
@@ -13,7 +13,7 @@ export function SignIn({
         await signIn(provider)
       }}
     >
-      <button {...props}>Sign In</button>
+      <Button {...props}>Sign In</Button>
     </form>
   )
 }
@@ -26,9 +26,9 @@ export function SignOut(props: any) {
         await signOut()
       }}
     >
-      <button {...props}>
+      <Button {...props}>
         Sign Out
-      </button>
+      </Button>
     </form>
   )
 }
