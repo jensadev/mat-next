@@ -1,0 +1,16 @@
+.button {
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: var(--space-s-m, 1rem);
+  font-size: var(--step-1, 1rem);
+}
+
+.button--small {
+  --step-1: 0.75rem;
+}
+
+.button--large {
+  --step-1: 1.25rem;
+}

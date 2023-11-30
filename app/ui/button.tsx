@@ -1,19 +1,26 @@
 import clsx from 'clsx';
-
+import './button.css';
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+  label: string;
+  className?: string;
+  size?: 'small' | 'medium' | 'large';
+  onClick?: () => void;
 }
 
-export function Button({ children, className, ...rest }: ButtonProps) {
+export function Button(
+  { label, className, size = "medium", ...props }
+    : ButtonProps
+) {
   return (
     <button
-      {...rest}
+      type="button"
       className={clsx(
         '',
         className,
-      )}
+      ) + ` button button--${size}`}
+      {...props}
     >
-      {children}
+      {label}
     </button>
   );
 }
